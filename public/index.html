@@ -1,0 +1,80 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <link rel="stylesheet" href="./css/fullCalendar.css">
+  <link rel="stylesheet" href="/build/style.css">
+  <title>FullCalendar Customization</title>
+</head>
+<body>
+  <!-- date scheduler modal -->
+  <div class="relative">
+    <div id="ko-modal" class="h-screen w-full absolute left-0 top-0 z-10 hidden justify-center items-center">
+      <div class="w-1/2 bg-white border-2 border-blue-500 rounded">
+        <!-- modal-content-wrapper -->
+        <div>
+          <!-- modal title -->
+          <div class="border-b-2 border-blue-500 px-5 py-5">
+            <p class="text-blue-500 text-lg">Lorem, ipsum.</p>
+          </div>
+          <!-- modal body -->
+          <div class="px-5 py-5">
+            <div>
+              <!-- label -->
+              <div class="mb-2">
+                <label for="scheduler" class="capitalize text-base text-gray-600">scheduler</label>
+              </div>
+              <!-- input -->
+              <div>
+                <input type="text" id="scheduler" placeholder="Scheduler date..." class="border border-gray-300 focus:border-blue-500 focus:border-none focus:outline-none focus:placeholder-blue-500 p placeholder-gray-400 px-5 py-2 rounded text-blue-500 text-sm w-full">
+              </div>
+            </div>
+
+            <div>
+              <!-- label -->
+              <div class="mb-2">
+                <label for="scheduler" class="capitalize text-base text-gray-600">scheduler</label>
+              </div>
+              <!-- input -->
+              <div>
+                <input type="text" id="scheduler" placeholder="Scheduler date..." class="border border-gray-300 focus:border-blue-500 focus:border-none focus:outline-none focus:placeholder-blue-500 p placeholder-gray-400 px-5 py-2 rounded text-blue-500 text-sm w-full">
+              </div>
+            </div>
+
+            <div>
+              <!-- label -->
+              <div class="mb-2">
+                <label for="scheduler" class="capitalize text-base text-gray-600">scheduler</label>
+              </div>
+              <!-- input -->
+              <div>
+                <input type="text" id="scheduler" placeholder="Scheduler date..." class="border border-gray-300 focus:border-blue-500 focus:border-none focus:outline-none focus:placeholder-blue-500 p placeholder-gray-400 px-5 py-2 rounded text-blue-500 text-sm w-full">
+              </div>
+            </div>
+            
+            <!-- button area -->
+            <div class="flex justify-end">
+              <div class="flex mt-3">
+                  <!-- close button -->
+                <div class="mr-3">
+                  <button class="px-5 py-2 rounded bg-red-200 hover:bg-red-300 text-red-800">close</button>
+                </div>  
+                <!-- save button -->
+                <div>
+                  <button class="px-5 py-2 rounded bg-blue-500 text-white hover:bg-blue-600">save</button>
+                </div>
+              </div>
+            </div>
+          </div> 
+        </div>
+      </div>
+    </div>
+    <!-- fullCalendar -->
+    <div id='calendar'></div>
+  </div>
+<!-- script -->
+<script type="text/javascript" src="js/fullCalendar.js"></script>
+<script type="text/javascript" src="js/activeFullCalendar.js"></script> 
+</body>
+</html>
