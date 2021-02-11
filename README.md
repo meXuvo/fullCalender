@@ -39,4 +39,4 @@ yarn production
 ```
 ## Credits
 
-Made by [meXuvo](http://mexuvo.com/)
+Made by [meXuvo](http://www.mexuvo.com/)
