@@ -3,26 +3,33 @@ document.addEventListener('DOMContentLoaded', function() {
 
     var calendar = new FullCalendar.Calendar(calendarEl, {
         dateClick: function() {
+
+            // modal : when you click date section then show modal for create scheduled 
+            const closeModalScheduler = document.querySelector("#close-modal-scheduler");
             const koModal = document.querySelector('#ko-modal');
             koModal.classList.remove("hidden");
             koModal.classList.add("flex");
-            window.onclick = function(event) {
-                if (event.target == koModal) {
-                  koModal.classList.remove("flex");
-                  koModal.classList.add("hidden");
-                }
-              }
-              document.addEventListener("scroll",(event)=>{
+            function flexHiddenMethods(){
                 koModal.classList.remove("flex");
                 koModal.classList.add("hidden");
-              })
+            }
+            // close-button
+            closeModalScheduler.addEventListener('click',flexHiddenMethods);
+            // close-onscroll
+            document.addEventListener("scroll",flexHiddenMethods);
+            // close-outSideClick
+            window.onclick = function(event) {
+                if (event.target == koModal) {
+                    flexHiddenMethods();
+                }
+              }
           },
       headerToolbar: {
         left: 'prev,next today',
         center: 'title',
         right: 'dayGridMonth,timeGridWeek,timeGridDay,listMonth'
       },
-      initialDate: '2020-09-12',
+      initialDate: '2020-09-12',// using new Date(); and set your scheduled on event array
       navLinks: true, // can click day/week names to navigate views
       businessHours: true, // display business hours
       editable: true,
