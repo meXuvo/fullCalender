@@ -25,9 +25,9 @@ document.addEventListener('DOMContentLoaded', function() {
               }
           },
       headerToolbar: {
-        left: 'prev,next today',
-        center: 'title',
-        right: 'dayGridMonth,timeGridWeek,timeGridDay,listMonth'
+        left: 'dayGridMonth,timeGridWeek,timeGridDay,listMonth',
+        center: 'title,prev,next',
+        right: false
       },
       initialDate: '2020-09-12',// using new Date(); and set your scheduled on event array
       navLinks: true, // can click day/week names to navigate views
@@ -87,6 +87,8 @@ document.addEventListener('DOMContentLoaded', function() {
         }
       ],
     });
-
     calendar.render();
+    const addClsPrntElmnt = document.querySelector('.fc-toolbar-title').parentElement;
+    addClsPrntElmnt.classList.add('MiddletitleButton');
+    console.log(addClsPrntElmnt);
   });

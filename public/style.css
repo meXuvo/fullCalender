@@ -1,7 +1,34 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+.fc .fc-non-business{
+    background-color: white !important;
+}
+.fc-day-sun .fc-col-header-cell-cushion,
+.fc-day-sun a.fc-daygrid-day-number {
+    color: red !important;
+}
+.fc-day-sat,
+.fc-day-sat a.fc-daygrid-day-number {
+    color: red !important;
+}
 
-.suvo{
-    color:red;
+.fc-button-group button.fc-dayGridMonth-button.fc-button.fc-button-primary,
+.fc-button-group button.fc-timeGridWeek-button.fc-button.fc-button-primary,
+.fc-button-group button.fc-timeGridDay-button.fc-button.fc-button-primary,
+.fc-button-group button.fc-listMonth-button.fc-button.fc-button-primary{
+    display: none !important;
+}
+button.fc-button.fc-button-primary.fc-next-button,
+button.fc-button.fc-button-primary.fc-prev-button {
+    border: 1px solid gray;
+    padding: 10px 5px;
+    border-radius: 5px;
+    margin-right: 2px;
+}
+.MiddletitleButton{
+    display: flex;
+}
+.fc-toolbar-title{
+    margin-right: 20px !important;
 }
