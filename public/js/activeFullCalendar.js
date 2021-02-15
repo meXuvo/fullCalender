@@ -2,8 +2,14 @@ document.addEventListener('DOMContentLoaded', function() {
     var calendarEl = document.getElementById('calendar');
 
     var calendar = new FullCalendar.Calendar(calendarEl, {
+
         dateClick: function() {
 
+          let params = `scrollbars=no,resizable=no,status=no,location=no,toolbar=no,menubar=no,
+          width=600,height=300,left=100,top=100`;
+
+          open('/', 'test', params);
+           /* 
             // modal : when you click date section then show modal for create scheduled 
             const closeModalScheduler = document.querySelector("#close-modal-scheduler");
             const koModal = document.querySelector('#ko-modal');
@@ -23,6 +29,7 @@ document.addEventListener('DOMContentLoaded', function() {
                     flexHiddenMethods();
                 }
               }
+ */
           },
       headerToolbar: {
         left: 'dayGridMonth,timeGridWeek,timeGridDay,listMonth',
@@ -30,7 +37,7 @@ document.addEventListener('DOMContentLoaded', function() {
         right: false
       },
       initialDate: '2020-09-12',// using new Date(); and set your scheduled on event array
-      navLinks: true, // can click day/week names to navigate views
+      navLinks: false ,// can click day/week names to navigate views
       businessHours: true, // display business hours
       editable: true,
       selectable: true,
@@ -90,5 +97,6 @@ document.addEventListener('DOMContentLoaded', function() {
     calendar.render();
     const addClsPrntElmnt = document.querySelector('.fc-toolbar-title').parentElement;
     addClsPrntElmnt.classList.add('MiddletitleButton');
-    console.log(addClsPrntElmnt);
+    
   });
+
