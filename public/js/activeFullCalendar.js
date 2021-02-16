@@ -4,12 +4,16 @@ document.addEventListener('DOMContentLoaded', function() {
     var calendar = new FullCalendar.Calendar(calendarEl, {
 
         dateClick: function() {
+          /* 
 
-          let params = `scrollbars=no,resizable=no,status=no,location=no,toolbar=no,menubar=no,
-          width=600,height=300,left=100,top=100`;
+            //click add new window
 
-          open('/', 'test', params);
-           /* 
+            let params = `scrollbars=no,resizable=no,status=no,location=no,toolbar=no,menubar=no,
+            width=600,height=300,left=100,top=100`;
+            open('/', 'test', params);
+
+          */ 
+
             // modal : when you click date section then show modal for create scheduled 
             const closeModalScheduler = document.querySelector("#close-modal-scheduler");
             const koModal = document.querySelector('#ko-modal');
@@ -29,14 +33,13 @@ document.addEventListener('DOMContentLoaded', function() {
                     flexHiddenMethods();
                 }
               }
- */
           },
       headerToolbar: {
         left: 'dayGridMonth,timeGridWeek,timeGridDay,listMonth',
         center: 'title,prev,next',
         right: false
       },
-      initialDate: '2020-09-12',// using new Date(); and set your scheduled on event array
+      initialDate: new Date(),// using new Date(); and set your scheduled on event array 2020-09-12
       navLinks: false ,// can click day/week names to navigate views
       businessHours: true, // display business hours
       editable: true,
@@ -94,6 +97,21 @@ document.addEventListener('DOMContentLoaded', function() {
         }
       ],
     });
+    /* 
+    
+    var monthFilter = document.querySelector('#monthFilter');
+    const monthNames = ["January", "February", "March", "April", "May", "June","July", "August", "September", "October", "November", "December"];
+    var monthShow="";
+    for(let i = 0; i < monthNames.length ; i++){
+      monthShow +=  "<option value='" + monthNames[i] + "'>" + monthNames[i] + "</option>";
+    }
+    monthFilter.innerHTML = monthShow;
+
+     */
+    const getDateall = calendar.getDate();
+    const getMonthAll = getDateall.getMonth();
+    calendar.fullCalendar('gotoDate',getMonthAll);
+
     calendar.render();
     const addClsPrntElmnt = document.querySelector('.fc-toolbar-title').parentElement;
     addClsPrntElmnt.classList.add('MiddletitleButton');
