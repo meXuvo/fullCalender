@@ -39,7 +39,7 @@ document.addEventListener("DOMContentLoaded", function () {
         };
       },
       headerToolbar: {
-        // left: "dayGridMonth,timeGridWeek,timeGridDay,listMonth",
+        left: "dayGridMonth,timeGridWeek,timeGridDay,listMonth",
         center: "title,prev,next",
         right: false,
       },
@@ -65,7 +65,7 @@ document.addEventListener("DOMContentLoaded", function () {
           constraint: "availableForMeeting", // defined below
           color: "#257e4a",
         },
-        {
+        /* {
           title: "Conference",
           start: "2020-09-18",
           end: "2020-09-20",
@@ -103,7 +103,7 @@ document.addEventListener("DOMContentLoaded", function () {
           overlap: false,
           display: "background",
           color: "#ff9f89",
-        },
+        }, */
       ],
     });
 
@@ -122,7 +122,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
      */
   // calendar.render();
-  renderCalendar("timeGridWeek");
+  renderCalendar("dayGridMonth");
 
 
   document
@@ -134,4 +134,17 @@ document.addEventListener("DOMContentLoaded", function () {
   const addClsPrntElmnt = document.querySelector(".fc-toolbar-title")
     .parentElement;
   addClsPrntElmnt.classList.add("MiddletitleButton");
+
+  const checkEvnt = document.querySelectorAll('.fc-daygrid-event-harness');
+
+    checkEvnt.forEach(function(item){
+
+      item.addEventListener('click',(event) => {
+        let params = `scrollbars=no,resizable=no,status=no,location=no,toolbar=no,menubar=no,
+                width=600,height=300,left=100,top=100`;
+                open('/', 'test', params);
+        
+      });
+     
+    })
 });

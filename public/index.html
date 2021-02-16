@@ -71,14 +71,19 @@
       </div>
     </div>
 
-    <!-- month-week -->
-    <select name="view" id="calendarView">
-      <option value="dayGridMonth">month</option>
-      <option value="dayGridWeek">week</option>
-      <option value="timeGridDay">day</option>
-    </select>
-    <!-- fullCalendar -->
-    <div id='calendar' style="color: gray;">
+    <div>
+      <!-- month-week -->
+      <div class="absolute top-0 left-0" style="color:gray;border: 1px solid gray;
+      padding: 10px 40px;
+      border-radius: 5px;">
+        <select name="view" id="calendarView" class="capitalize focus:outline-none">
+          <option value="dayGridMonth">month</option>
+          <option value="dayGridWeek">week</option>
+          <option value="timeGridDay">day</option>
+        </select>
+      </div>
+      <!-- fullCalendar -->
+      <div id='calendar' style="color: gray;"></div>
     </div>
   </div>
 

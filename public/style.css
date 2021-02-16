@@ -12,20 +12,21 @@
 .fc-day-sat a.fc-daygrid-day-number {
     color: red !important;
 }
-/* 
+
 .fc-button-group button.fc-dayGridMonth-button.fc-button.fc-button-primary,
 .fc-button-group button.fc-timeGridWeek-button.fc-button.fc-button-primary,
 .fc-button-group button.fc-timeGridDay-button.fc-button.fc-button-primary,
 .fc-button-group button.fc-listMonth-button.fc-button.fc-button-primary{
     display: none !important;
 }
- */
+
 button.fc-button.fc-button-primary.fc-next-button,
 button.fc-button.fc-button-primary.fc-prev-button {
     border: 1px solid gray;
     padding: 10px 5px;
     border-radius: 5px;
     margin-right: 2px;
+    outline: none;
 }
 .MiddletitleButton{
     display: flex;
