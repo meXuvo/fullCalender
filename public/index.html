@@ -72,18 +72,53 @@
     </div>
 
     <div>
-      <!-- month-week -->
-      <div class="absolute top-0 left-0" style="color:gray;border: 1px solid gray;
-      padding: 10px 40px;
-      border-radius: 5px;">
-        <select name="view" id="calendarView" class="capitalize focus:outline-none">
-          <option value="dayGridMonth">month</option>
-          <option value="dayGridWeek">week</option>
-          <option value="timeGridDay">day</option>
-        </select>
+      <div class="absolute top-0 left-0 flex">
+        <!-- client -->
+        <div class="mr-5"  style="color:gray;border: 1px solid gray;
+        padding: 10px 10px;
+        border-radius: 10px;">
+          <select class="capitalize focus:outline-none" style="padding: 0px 50px; font-weight: bold;">
+            <option value="Shuvo">Shuvo</option>
+            <option value="Moin">Moin</option>
+            <option value="Maria">Maria</option>
+          </select>
+        </div>
+        <!-- month filter -->
+        <div  style="color:gray;border: 1px solid gray;
+        padding: 10px 10px;
+        border-radius: 10px;">
+          <select class="capitalize focus:outline-none" style="padding: 0px 50px;font-weight: bold;">
+            <option value="01">January</option>
+            <option value="02">February</option>
+            <option value="03">March</option>
+            <option value="04">April</option>
+            <option value="05">May</option>
+            <option value="06">June</option>
+            <option value="07">July</option>
+            <option value="08">August</option>
+            <option value="09">September</option>
+            <option value="10">October</option>
+            <option value="11">November</option>
+            <option value="12">December</option>
+          </select>
+        </div>
       </div>
       <!-- fullCalendar -->
       <div id='calendar' style="color: gray;"></div>
+
+      <!-- month-week -->
+      <div class="absolute top-0 right-0">
+        <div  style="color:gray;border: 1px solid gray;
+        padding: 10px 10px;
+        border-radius: 10px;">
+          <select name="view" id="calendarView" class="capitalize focus:outline-none" style="padding: 0px 50px;font-weight: bold;">
+            <option value="dayGridMonth">month</option>
+            <option value="dayGridWeek">week</option>
+            <option value="timeGridDay">day</option>
+          </select>
+        </div>
+      </div>
+
     </div>
   </div>
 

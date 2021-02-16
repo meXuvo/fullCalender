@@ -53,17 +53,19 @@ document.addEventListener("DOMContentLoaded", function () {
           title: "Business Lunch",
           start: "2020-09-03T13:00:00",
           constraint: "businessHours",
+          color: "#F5BA47",
         },
         {
           title: "meeting",
           start: "2020-09-03T14:00:00",
           constraint: "businessHours",
+          color: "#2444F5",
         },
         {
           title: "Meeting",
           start: "2020-09-13T11:00:00",
           constraint: "availableForMeeting", // defined below
-          color: "#257e4a",
+          color: "#2444F5",
         },
         /* {
           title: "Conference",
