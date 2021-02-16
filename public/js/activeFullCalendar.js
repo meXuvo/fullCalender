@@ -35,12 +35,12 @@ document.addEventListener('DOMContentLoaded', function() {
               }
           },
       headerToolbar: {
-        left: 'dayGridMonth,timeGridWeek,timeGridDay,listMonth',
+        left: 'dayGridMonth,timeGridWeek',
         center: 'title,prev,next',
         right: false
       },
-      initialDate: new Date(),// using new Date(); and set your scheduled on event array 2020-09-12
-      navLinks: false ,// can click day/week names to navigate views
+      initialDate: '2020-09-12',// using new Date(); and set your scheduled on event array 
+      navLinks: true ,// can click day/week names to navigate views
       businessHours: true, // display business hours
       editable: true,
       selectable: true,
@@ -97,6 +97,8 @@ document.addEventListener('DOMContentLoaded', function() {
         }
       ],
     });
+    
+    
     /* 
     
     var monthFilter = document.querySelector('#monthFilter');
@@ -108,11 +110,8 @@ document.addEventListener('DOMContentLoaded', function() {
     monthFilter.innerHTML = monthShow;
 
      */
-    const getDateall = calendar.getDate();
-    const getMonthAll = getDateall.getMonth();
-    calendar.fullCalendar('gotoDate',getMonthAll);
-
     calendar.render();
+
     const addClsPrntElmnt = document.querySelector('.fc-toolbar-title').parentElement;
     addClsPrntElmnt.classList.add('MiddletitleButton');
     
