@@ -3,6 +3,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
     var calendar = new FullCalendar.Calendar(calendarEl, {
 
+        
         dateClick: function() {
           /* 
 
@@ -35,19 +36,24 @@ document.addEventListener('DOMContentLoaded', function() {
               }
           },
       headerToolbar: {
-        left: 'dayGridMonth,timeGridWeek',
+        left: 'dayGridMonth,timeGridWeek,timeGridDay,listMonth',
         center: 'title,prev,next',
         right: false
       },
       initialDate: '2020-09-12',// using new Date(); and set your scheduled on event array 
       navLinks: true ,// can click day/week names to navigate views
       businessHours: true, // display business hours
-      editable: true,
+      editable: false,
       selectable: true,
       events: [
         {
           title: 'Business Lunch',
           start: '2020-09-03T13:00:00',
+          constraint: 'businessHours'
+        },
+        {
+          title: 'meeting',
+          start: '2020-09-03T14:00:00',
           constraint: 'businessHours'
         },
         {
@@ -97,8 +103,6 @@ document.addEventListener('DOMContentLoaded', function() {
         }
       ],
     });
-    
-    
     /* 
     
     var monthFilter = document.querySelector('#monthFilter');
@@ -111,7 +115,6 @@ document.addEventListener('DOMContentLoaded', function() {
 
      */
     calendar.render();
-
     const addClsPrntElmnt = document.querySelector('.fc-toolbar-title').parentElement;
     addClsPrntElmnt.classList.add('MiddletitleButton');
     
