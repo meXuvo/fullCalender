@@ -1,5 +1,6 @@
 <!doctype html>
 <html lang="en">
+
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
@@ -7,6 +8,7 @@
   <link rel="stylesheet" href="/build/style.css">
   <title>FullCalendar Customization</title>
 </head>
+
 <body>
   <!-- date scheduler modal -->
   <div class="relative">
@@ -27,7 +29,8 @@
               </div>
               <!-- input -->
               <div>
-                <input type="text" id="scheduler" placeholder="Scheduler date..." class="border border-gray-300 focus:border-blue-500 focus:border-none focus:outline-none focus:placeholder-blue-500 p placeholder-gray-400 px-5 py-2 rounded text-blue-500 text-sm w-full">
+                <input type="text" id="scheduler" placeholder="Scheduler date..."
+                  class="border border-gray-300 focus:border-blue-500 focus:border-none focus:outline-none focus:placeholder-blue-500 p placeholder-gray-400 px-5 py-2 rounded text-blue-500 text-sm w-full">
               </div>
             </div>
 
@@ -38,7 +41,8 @@
               </div>
               <!-- input -->
               <div>
-                <input type="text" id="scheduler" placeholder="Scheduler date..." class="border border-gray-300 focus:border-blue-500 focus:border-none focus:outline-none focus:placeholder-blue-500 p placeholder-gray-400 px-5 py-2 rounded text-blue-500 text-sm w-full">
+                <input type="text" id="scheduler" placeholder="Scheduler date..."
+                  class="border border-gray-300 focus:border-blue-500 focus:border-none focus:outline-none focus:placeholder-blue-500 p placeholder-gray-400 px-5 py-2 rounded text-blue-500 text-sm w-full">
               </div>
             </div>
 
@@ -49,24 +53,27 @@
               </div>
               <!-- input -->
               <div>
-                <input type="text" id="scheduler" placeholder="Scheduler date..." class="border border-gray-300 focus:border-blue-500 focus:border-none focus:outline-none focus:placeholder-blue-500 p placeholder-gray-400 px-5 py-2 rounded text-blue-500 text-sm w-full">
+                <input type="text" id="scheduler" placeholder="Scheduler date..."
+                  class="border border-gray-300 focus:border-blue-500 focus:border-none focus:outline-none focus:placeholder-blue-500 p placeholder-gray-400 px-5 py-2 rounded text-blue-500 text-sm w-full">
               </div>
             </div>
-            
+
             <!-- button area -->
             <div class="flex justify-end">
               <div class="flex mt-3">
-                  <!-- close button -->
+                <!-- close button -->
                 <div class="mr-3">
-                  <button id="close-modal-scheduler" class="px-5 py-2 rounded bg-red-200 hover:bg-red-300 text-red-800 focus:outline-none">close</button>
-                </div>  
+                  <button id="close-modal-scheduler"
+                    class="px-5 py-2 rounded bg-red-200 hover:bg-red-300 text-red-800 focus:outline-none">close</button>
+                </div>
                 <!-- save button -->
                 <div>
-                  <button class="px-5 py-2 rounded bg-blue-500 text-white hover:bg-blue-600 focus:outline-none">save</button>
+                  <button
+                    class="px-5 py-2 rounded bg-blue-500 text-white hover:bg-blue-600 focus:outline-none">save</button>
                 </div>
               </div>
             </div>
-          </div> 
+          </div>
         </div>
       </div>
     </div>
@@ -74,20 +81,19 @@
     <div>
       <div class="absolute top-0 left-0 flex">
         <!-- client -->
-        <div class="mr-5"  style="color:gray;border: 1px solid gray;
-        padding: 10px 10px;
-        border-radius: 10px;">
-          <select class="capitalize focus:outline-none" style="padding: 0px 50px; font-weight: bold;">
+        <div class="mr-4">
+          <select id="client" name="client"
+            class="mt-1 font-bold block w-full pl-3 px-10 py-3 text-base bg-white border-2 border-gray-300 focus:outline-none focus:gray-500 focus:border-gray-300 sm:text-sm rounded-md">
             <option value="Shuvo">Shuvo</option>
             <option value="Moin">Moin</option>
             <option value="Maria">Maria</option>
           </select>
         </div>
+
         <!-- month filter -->
-        <div  style="color:gray;border: 1px solid gray;
-        padding: 10px 10px;
-        border-radius: 10px;">
-          <select class="capitalize focus:outline-none" style="padding: 0px 50px;font-weight: bold;">
+        <div>
+          <select id="client" name="client"
+            class="font-bold mt-1 block w-full pl-3 px-10 py-3 text-base bg-white border-2 border-gray-300 focus:outline-none focus:gray-500 focus:border-gray-300 sm:text-sm rounded-md">
             <option value="01">January</option>
             <option value="02">February</option>
             <option value="03">March</option>
@@ -108,10 +114,9 @@
 
       <!-- month-week -->
       <div class="absolute top-0 right-0">
-        <div  style="color:gray;border: 1px solid gray;
-        padding: 10px 10px;
-        border-radius: 10px;">
-          <select name="view" id="calendarView" class="capitalize focus:outline-none" style="padding: 0px 50px;font-weight: bold;">
+        <div>
+          <select name="view" id="calendarView"
+            class="font-bold mt-1 block w-full pl-3 px-10 py-3 text-base bg-white border-2 border-gray-300 focus:outline-none focus:gray-500 focus:border-gray-300 sm:text-sm rounded-md">
             <option value="dayGridMonth">month</option>
             <option value="dayGridWeek">week</option>
             <option value="timeGridDay">day</option>
@@ -123,11 +128,12 @@
   </div>
 
 
-  
-<!-- script -->
-<!-- fullCalendar package -->
-<script type="text/javascript" src="js/fullCalendar.js"></script>
-<!-- customize fullCalendar package -->
-<script type="text/javascript" src="js/activeFullCalendar.js"></script> 
+
+  <!-- script -->
+  <!-- fullCalendar package -->
+  <script type="text/javascript" src="js/fullCalendar.js"></script>
+  <!-- customize fullCalendar package -->
+  <script type="text/javascript" src="js/activeFullCalendar.js"></script>
 </body>
+
 </html>

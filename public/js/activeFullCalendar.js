@@ -1,7 +1,6 @@
 document.addEventListener("DOMContentLoaded", function () {
   var calendarEl = document.getElementById("calendar");
 
-
   function renderCalendar(view) {
     const calendar = new FullCalendar.Calendar(calendarEl, {
       initialView: view,
@@ -126,7 +125,6 @@ document.addEventListener("DOMContentLoaded", function () {
   // calendar.render();
   renderCalendar("dayGridMonth");
 
-
   document
     .getElementById("calendarView")
     .addEventListener("change", function () {
@@ -137,16 +135,13 @@ document.addEventListener("DOMContentLoaded", function () {
     .parentElement;
   addClsPrntElmnt.classList.add("MiddletitleButton");
 
-  const checkEvnt = document.querySelectorAll('.fc-daygrid-event-harness');
+  const checkEvnt = document.querySelectorAll(".fc-daygrid-event-harness");
 
-    checkEvnt.forEach(function(item){
-
-      item.addEventListener('click',(event) => {
-        let params = `scrollbars=no,resizable=no,status=no,location=no,toolbar=no,menubar=no,
+  checkEvnt.forEach(function (item) {
+    item.addEventListener("click", (event) => {
+      let params = `scrollbars=no,resizable=no,status=no,location=no,toolbar=no,menubar=no,
                 width=600,height=300,left=100,top=100`;
-                open('/', 'test', params);
-        
-      });
-     
-    })
+      open("/", "test", params);
+    });
+  });
 });
