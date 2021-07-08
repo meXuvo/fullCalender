@@ -42,7 +42,7 @@ document.addEventListener("DOMContentLoaded", function () {
         center: "title,prev,next",
         right: false,
       },
-      initialDate: "2020-09-12", // using new Date(); and set your scheduled on event array
+      initialDate:  new Date(), // using new Date(); and set your scheduled on event array
       navLinks: true, // can click day/week names to navigate views
       businessHours: true, // display business hours
       editable: false,
